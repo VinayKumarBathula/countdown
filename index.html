@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    </head>
+<style>
+    *{
+        margin: 0;
+        padding:0;
+        font-family: Arial, Helvetica, sans-serif;
+        box-sizing: border-box;
+    }
+    .container{
+    width: 100vw;
+    height: 300vh;
+    background-color: black;
+    background-image: url(F-tQWpkWAAAU9aY-scaled.jpeg);
+background-position: center;
+background-size: cover;
+padding: 0 8%;
+position: relative;
+}
+
+.matter{
+    top: 30%;
+    position: absolute;
+    transform: translateY(-50%);
+    color: #fff;
+
+}
+.matter h1{
+    font-size: 50px;
+    font-weight: 300;
+    margin-bottom: 50px;
+    background-color: green;
+}
+.matter h1{
+    color: black;
+    font-style: italic;
+    color: maroon;
+    background-color: green;
+    ;
+}
+.matter h4{
+font-size: 30px;
+font-weight: bold;
+font-style: italic;
+color: maroon;
+}
+.launch{
+    display: flex;
+    background-color: blue;
+}
+.launch div{
+    flex-basis: 100px;
+}
+
+.launch div p{
+    font-size: 70px;
+    margin-bottom: -14px;
+    border: 20px;
+}
+</style>
+<body>
+ <div class="container">
+<div class="matter">
+    <h4> Grand launchig trailer</h4>
+    <h1>SALAR</h1>
+<div class="launch">
+   <div>
+    <p id="days">00</p>
+    <span>Days</span>
+   </div>
+   <div>
+    <p id="hours">00</p>
+    <span>Hours</span>
+   </div>
+   <div>
+    <p id="minutes">00</p>
+    <span>Minutes</span>
+   </div>
+   <div>
+    <p id="seconds">00</p>
+    <span>Seconds</span>
+   </div>
+</div>
+ </div>
+ </div>
+   <script>
+    var countDownDate = new Date(" january 08,2024 00:00:00").getTime();
+    var x=setInterval(function(){
+        var now= new Date().getTime();
+        var distance= countDownDate- now;
+        var days= Math.floor(distance/(1000*60*60*24));
+        var hours= Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+        var minutes=Math.floor((distance%(1000*60*60))/(1000*60));
+        var seconds=Math.floor((distance%(1000*60))/1000);
+        document.getElementById("days").innerHTML=days;
+        document.getElementById("hours").innerHTML=hours;
+        document.getElementById("minutes").innerHTML=minutes;
+        document.getElementById("seconds").innerHTML=seconds;
+        if (diastance<0){
+            clearInterval(x)
+     document.getElementById("days").innerHTML=00;
+        document.getElementById("hours").innerHTML=00;
+        document.getElementById("minutes").innerHTML=00;
+        document.getElementById("seconds").innerHTML=00;
+        }
+},1000);
+   </script> 
+ </body>
+</html>
